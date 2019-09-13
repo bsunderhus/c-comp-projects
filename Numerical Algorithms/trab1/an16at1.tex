@@ -1,0 +1,461 @@
+\documentclass{article}
+
+\usepackage[brazil]{babel}    %%% Muda variáveis, ex. Abstract ---> Resumo
+\usepackage[latin1]{inputenc} %%% Substitui acentuação por TeX puro
+                              %%% Permite escrever com acentos, til e cedilha
+\usepackage[mmddyyyy,24hr]{datetime}	% Must come after 'babel' package
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pstricks,pst-plot}
+\usepackage{listings}
+\usepackage{graphicx}
+\newcommand{\f}{\footnotesize}
+
+\newcommand{\transpose}{{^{\mathsf{T}}}}
+
+\newcommand{\aalpha}{{\boldsymbol{\alpha}}}
+\newcommand{\bbeta}{{\boldsymbol{\beta}}}
+\newcommand{\bb}{{\mathbf{b}}}
+\newcommand{\cc}{{\mathbf{c}}}
+\newcommand{\CC}{{\mathbf{C}}}
+\newcommand{\ee}{{\mathbf{e}}}
+\newcommand{\ff}{{\mathbf{f}}}
+\newcommand{\FF}{{\mathbf{F}}}
+\newcommand{\mm}{{\boldsymbol{{\mu}}}}
+\newcommand{\SSigma}{{\mathbf{{\Sigma}}}}
+\newcommand{\nnabla}{{\mathbf{{\nabla}}}}
+\newcommand{\mmm}{{\mathbf{m}}}
+\newcommand{\OO}{{\mathbf{O}}}
+\newcommand{\boldZero}{{\mathbf{0}}}
+\newcommand{\uu}{{\mathbf{u}}}
+\newcommand{\pp}{{\mathbf{p}}}
+\newcommand{\qq}{{\mathbf{q}}}
+\newcommand{\vv}{{\mathbf{v}}}
+\newcommand{\JJ}{{\mathbf{J}}}
+\newcommand{\jj}{{\mathbf{j}}}
+\newcommand{\hh}{{\mathbf{h}}}
+\newcommand{\ww}{{\mathbf{w}}}
+\newcommand{\ttau}{{\boldsymbol{{\tau}}}}
+\newcommand{\ttheta}{{\boldsymbol{{\theta}}}}
+\newcommand{\tb}{{\mathbf{t}}}
+\newcommand{\TT}{{\mathbf{T}}}
+\newcommand{\xx}{{\mathbf{x}}}
+\newcommand{\XX}{{\mathbf{X}}}
+\newcommand{\yy}{{\mathbf{y}}}
+
+
+\newcommand{\refEq}[1]{(Eq.~\ref{eq:#1})}
+\newcommand{\refeq}[1]{(\ref{eq:#1})}
+\newcommand{\reffig}[1]{fig.~\ref{fig:#1}}
+\newcommand{\refFig}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\reftab}[1]{tabela~\ref{tab:#1}}
+\newcommand{\refTab}[1]{Tabela~\ref{tab:#1}}
+
+
+
+\parindent=0pt
+
+% English
+\hyphenation{pi-xel pi-xels}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[obeyspaces]{url}% http://ctan.org/pkg/url
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
+\usepackage{etoolbox}
+\makeatletter
+\newcommand\urlemail[2]{%                %\newcommand\tpj@compose@mailto[3]{%
+\edef\@tempa{mailto:#1?subject=#2 }%
+\edef\@tempb{\expandafter\html@spaces\@tempa\@empty}%
+\mbox{\url{\@tempb}}}
+
+\catcode\%=11
+\def\html@spaces#1 #2{#1%20\ifx#2\@empty\else\expandafter\html@spaces\fi#2}
+\catcode\%=14
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{url}
+\usepackage{geometry}
+\geometry{verbose,a4paper,tmargin=1.8cm,bmargin=1.8cm,lmargin=1.8cm,rmargin=1.8cm}
+\setlength{\parskip}{10pt}	% Vertical distance between two paragraphs
+
+
+\begin{document}
+\typeout{-------------------- L a T e X\space\space\space P A R A M E T E R S}
+\typeout{Paper height              = \the\paperheight}
+\typeout{Paragraph skip            = \the\parskip}
+\typeout{---------------------------------------------------}
+
+
+\begin{center}\textbf{
+\large UFES - CENTRO TECNOLÓGICO\\ DEPARTAMENTO DE INFORMÁTICA\\
+\normalsize Prof. Thomas W. Rauber}
+\end{center}
+
+% \textordfeminine
+\textbf{1\textordmasculine\ Trabalho de Algoritmos Numéricos (INF 09269) 2016/1}
+
+Data de entrega: veja \url{www.inf.ufes.br/~thomas}
+
+
+Linguagem de Programação para Implementação\\
+%Engenharia de Computação: C ou C++\\
+%Estatística: Octave\\
+Octave/Matlab, preferencialmente código que seja compatível com os dois ambientes\\
+Grupo de até dois alunos
+
+\textbf{Estudo Comparativo e Aplicação de Técnicas Numéricas
+de Solução de Equações Diferenciais Ordinárias.}\\
+
+
+
+\textbf{Problema:} Dado um problema de valor inicial (PVI)
+em uma Equação Diferencial Ordinária (EDO) de primeira ordem,
+\[
+%  \text{PVI} \begin{cases}
+   \begin{cases}
+               y' = f(x,y)\\
+               y(x_{0}) = y_{0},
+            \end{cases}
+\]
+o objetivo é criar uma sequência de estimativas
+$y_{1},\ldots, y_{n},\ldots$ dos valores verdadeiros
+$y(x_{1}),\ldots, y(x_{n}),\ldots$ da função $y(x)$
+em pontos equidistantes
+$x_{1},\ldots, x_{n}=x_{0}+nh, x_{n+1}=x_{n}+h,\ldots$.
+
+Se a variável dependente $x$ não está presente no lado direito da equação,
+a EDO simplifica para um \emph{sistema autônomo de primeira ordem} da forma
+\begin{equation}
+y' = f(y).
+\label{eq:ODEa}
+\end{equation} 
+
+\section{Teoria}\label{sec:teoria}
+
+Os métodos numéricos Euler, Euler Melhorado, Euler Modificado
+e Runge-Kutta devem ser comparados relativo ao erro entre o valor
+verdadeiro e estimado.
+
+Para conseguir medir o erro, a solução analítica tem que
+estar disponível. Para obtê-la deve-se usar uma ferramenta de
+processamento matemático simbólico, neste caso o 'Maxima'.
+O código em seguida mostra como obter a solução,
+dada a função $f(x,y)$ como lado direito da EDO na forma
+canônica $y' = f(x,y)$.
+Três funções \texttt{func(x,y)} diferentes estão definidos
+como exemplo (a última é válida, pois sobrescreve
+as anteriores com o mesmo nome).
+A atribuição de valores (neste caso zero)
+às variáveis $x_{0}$ e $y_{0}$
+aparece nos comandos \texttt{x0:0} e \texttt{y0:0}.
+
+
+% http://en.wikibooks.org/wiki/LaTeX/Packages/Listings
+\lstset{ %
+%language=Octave,                % choose the language of the code
+%language=bash,           % choose the language of the code
+morecomment=[l]{\%},
+basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+frame=single,	                % adds a frame around the code
+tabsize=4,		                % sets default tabsize to 2 spaces
+captionpos=b,                   % sets the caption-position to bottom
+breaklines=true,                % sets automatic line breaking
+breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+escapeinside={\%*}{*)}          % if you want to add a comment within your code
+}
+
+\begin{lstlisting}
+func(x,y) := (3*y+x)/(x-1)$
+func(x,y) := (2*x+y)/(x+1)$
+func(x,y) := (x+y)/(x+1)$
+
+x0:0$
+y0:0$
+
+print("PVI: y'=",func(x,y),", y(",x0,")=",y0)$
+
+disp("Solução analítica de PVI:")$
+y(x):=''(rhs(''(ic1(ode2('diff(y,x)=func(x,y),y,x),x=x0,y=y0))));
+\end{lstlisting}
+
+Após a obtenção da expressão analítica, a função tem que ser
+codificada em Octave/Matlab. Neste exemplo criou-se uma função
+com o nome \texttt{f1} que deve ser colocada em um arquivo separado
+com o nome \texttt{f1.m}. Todas as outras funções usadas como
+exemplos devem ser colocadas em outros arquivos (\texttt{f2.m},
+\texttt{f3.m}, \texttt{f4.m}, etc.)
+\lstset{ %
+language=Octave,                % choose the language of the code
+morecomment=[l]{\%},
+basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+frame=single,	                % adds a frame around the code
+tabsize=4,		                % sets default tabsize to 2 spaces
+captionpos=b,                   % sets the caption-position to bottom
+breaklines=true,                % sets automatic line breaking
+breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+escapeinside={\%*}{*)}          % if you want to add a comment within your code
+}
+
+\begin{lstlisting}
+function fx = f1(x)
+        fx = (x+1).*log(x+1)-x;
+end
+\end{lstlisting}
+
+Uma alternativa de implementação de funções são
+\emph{funções anônimas} que têm a forma
+\texttt{@(lista\_arg) expressão}, onde
+\texttt{@(lista\_arg)} são as variáveis (parâmetros da função)
+e \texttt{expressão} é o lado direito da equação que define a função.
+Por exemplo, para implementar
+a função com um argumento $f(x) = \frac{1}{2}e^{2x}$, a função anônima
+se define como \texttt{@(x) 0.5*exp(2*x)} e para
+a função com dois argumentos $f(x,y) = x^{2}+y^{2}-1$, a função anônima
+se define como \texttt{@(x,y) x*x+y*y-1}. Essa última verifica pelo sinal do
+resultado, se um ponto $(x,y)$ no sistema de coordenadas Cartesianas
+está dentro ou fora do círculo unitário
+As funções anônimas podem ser colocadas no mesmo arquivo que
+o programa principal. Veja o exemplo anexado \texttt{exemplo1.m}.
+
+
+
+O programa principal em Octave deve gerar a sequência de
+aproximações para cada método implementado de resolução numérica de EDO.
+Os métodos implementados devem ser pelo menos
+\begin{itemize}
+\item Euler
+\item Euler Melhorado
+\item Euler Modificado
+\item Um método de Runge-Kutta explícito: Runge-Kutta de ordem 3
+\item Um método de Runge-Kutta embutido: Bogacki-Shampine
+\end{itemize}
+
+
+Dois gráficos e duas tabelas devem ser gerados como
+saída do programa. Para gerar o gráfico, use o comando
+\texttt{plot} do Octave e para gerar uma tabela
+use os strings de formatação (similar em Octave e C).
+Por exemplo, o código a seguir produz uma tabela básica.
+\begin{lstlisting}
+fprintf('%5s | %15s | %15s | %15s | %15s | %15s\n',...
+		't','Afluente','Efluente','Vazamento','Ruido','Fluxo total');
+for i=1:96 fprintf('='); end; fprintf('\n');
+for t=0:tmax
+
+	%%% CALCULAR afluente, efluente, vaza, ruido, Q ...
+
+	fprintf('%5d | %15.2f | %15.2f | %15.2f | %15.2f | %15.2f\n',t,...
+			afluente(t+1),efluente(t+1), vaza(t+1), ruido(t+1), Q(t+1) );
+end
+\end{lstlisting}
+
+
+
+O primeiro grupo mostra a função exata $y(x)$ junto com
+as funções aproximadas. %, usando interpolação.
+%Ajuda: Dada uma sequência de
+%$n$ pares de valores $(x,y)$, armazenados
+%nos vetores \texttt{X} e \texttt{Y}, o seguinte
+%comando gera uma amostragem de $n$ ordenadas \texttt{YP},
+%baseada na interpolação: \texttt{YP = polyval(polyfit(X,Y,n),X,n);}.
+O segundo gráfico e tabela mostram para cada ponto $x_{n}$ uma comparação
+do erro absoluto de cada método implementado.
+O exemplo a seguir mostra o gráfico da função exata e as aproximações
+dos métodos.
+
+\begin{figure}[htbp]
+\centering
+	\includegraphics[width=0.5\columnwidth]{fig1.eps}
+\caption{Gráfico comparativo (ampliação de área de interesse)
+que mostra a função analítica, e três variações do método de
+Euler. Além disso as linhas verticais mostram o erro entre
+a solução exata e o método de Euler simples.}
+\label{fig:fig1}
+\end{figure}
+
+Pelo menos cinco funções diferentes devem ser testadas.
+
+
+
+\section{Problema Prático}\label{sec:aplicacao}
+
+Como exemplo prático de uso de equações diferenciais ordinárias
+deve-se calcular o volume de líquido em um reservatório em instantes de
+tempo discretos.
+A variação\footnote{Para uma variável $y$,
+a sua derivada temporal, ou seja, a taxa de mudança ao longo do tempo
+na notação de Leibniz $dy/dt$ pode ser expressa alternativamente
+na notação de Newton $\dot{y}$.}
+temporal $\dot{V} = \frac{dV}{dt}$
+do volume $V \left[\mathrm{m}^{3}\right]$
+de um líquido incompressível
+em um sistema fechado onde existem $p$ fluxos
+$Q \left[\frac{\mathrm{m}^{3}}{\mathrm{s}}\right]$
+de entrada $Q^{+}_{i}$ e $q$ fluxos de saída $Q^{-}_{j}$,
+é simplesmente o balanço destes fluxos, definido como
+\begin{equation}
+\dot{V} = \frac{dV}{dt} = \sum_{i=1}^{p} Q^{+}_{i} - \sum_{j=1}^{q} Q^{-}_{j}.
+\label{eq:fluxo}
+\end{equation}
+Note que \refeq{fluxo} é um sistema autônomo de primeira ordem,
+definido em \refeq{ODEa}.
+Seja dada uma estação de tratamento de resíduos experimental com
+inicialmente 500 metros cúbicos de líquido.
+Considera-se o sistema durante um período de 100 unidades
+temporais (minutos, horas, dias, etc.).
+%Seja a unidade temporal dada em horas [h].
+Nas definições seguintes, omitem-se as
+unidades.
+Há um fluxo afluente descrito por uma função por partes
+\begin{align}
+Q_{1}(t) = \begin{cases}
+		110, & \text{se}\ t \in \left[0,20 \right) \\
+		100, & \text{se}\ t \in \left[20,40 \right) \\
+		95, & \text{se}\ t \in \left[40,80 \right) \\
+		100, & \text{se}\ t \in \left[80,100 \right],
+	\end{cases}
+\label{eq:Q1}
+\end{align}
+um fluxo efluente
+\begin{align}
+Q_{2}(t) = \begin{cases}
+		100, & \text{se}\ t \in \left[0,30 \right) \\
+		95, & \text{se}\ t \in \left[30,40 \right) \\
+		105, & \text{se}\ t \in \left[40,70 \right) \\
+		85, & \text{se}\ t \in \left[70,100 \right],
+	\end{cases}
+\label{eq:Q2}
+\end{align}
+um vazamento
+\begin{align}
+v(t) = v_{\text{lim}} - (v_{\text{lim}} - v_{\text{nominal}})
+	\exp\left[\tau \theta(t_{\text{atraso}}-t)\right], \nonumber\\
+\theta(x) = \begin{cases}0, & \text{se}\ x \geq 0 \\ x, & \text{c.c.} \end{cases} 
+\label{eq:faulttrajectory}
+\end{align}
+onde 
+$v_{\text{nominal}}=0$ é valor do vazamento em condições de operação normal,
+$v_{\text{lim}}=10$ é o valor máximo que o vazamento possa atingir assintoticamente,
+$t_{\text{atraso}}=50$ é o instante de tempo em que o vazamento começa
+e $\tau=0.05$ é um parâmetro temporal que controla a velocidade da
+evolução do vazamento a partir do valor inicial até atingir o máximo.
+Além disso tem um fluxo aleatório uniformemente distribuído
+$\epsilon(t) \in \left[-3,3 \right]$. Ajuda: Use a função \texttt{rand}
+do Octave para obter um número aleatório entre zero e um, e aplique um
+escalamento linear apropriado para forçar para o intervalo especificado.
+
+Portanto neste cenário, a variação do volume do
+reservatório de \refeq{fluxo} se instancia para
+\begin{equation}
+\dot{V} = Q_{1} - Q_{2} - v + \epsilon.
+\label{eq:fluxototal}
+\end{equation}
+
+
+\textbf{Tarefa:} Use um ou mais métodos de resolução de uma EDO
+da parte teórica deste trabalho para
+determinar o volume do reservatório de \refeq{fluxototal}.
+Considere somente um único passo do instante de tempo $t_{n}$ para
+o próximo instante de tempo $t_{n+1}$ para estimar $V(t_{n+1})$,
+dados o volume atual $V(t_{n})$ e os fluxos atuais
+$Q_{1}(t_{n}), Q_{2}(t_{n}), v(t_{n}), \epsilon(t_{n})$.
+O resultado, usando Euler simples, é apresentado na figura \ref{fig:fluxo}.
+
+
+\begin{figure}[htbp]
+\centering
+	\includegraphics[width=0.5\columnwidth]{fluxo.eps}
+\caption{Evolução temporal dos fluxos e do volume do reservatório.
+Mostra-se o volume $V-V_{0}$ relativo ao volume inicial $V_{0}=V(t=0)=500$.}
+\label{fig:fluxo}
+\end{figure}
+
+
+\textbf{Referências}
+\begin{itemize}
+\item Maxima\\
+	\url{http://maxima.sourceforge.net}
+\item Métodos de Runge-Kutta\\
+	\url{https://pt.wikipedia.org/wiki/M%C3%A9todo_de_Runge-Kutta}
+\item Lista de Métodos de Runge-Kutta\\
+	\url{https://en.wikipedia.org/wiki/List_of_Runge%E2%80%93Kutta_methods}
+\item Sistema Autônomo\\
+	\url{https://pt.wikipedia.org/wiki/Sistema_aut%C3%B4nomo_%28matem%C3%A1tica%29}
+\end{itemize}
+
+
+
+
+
+\textbf{Elaboração:}
+%A pasta do código contém um projeto completo, menos
+%as partes a serem desenvolvidas. O \texttt{Makefile}
+%precisa de arquivo(s) de código fonte \texttt{*.c} que devem ser
+%desenvolvidos. Pode-se modificar o projeto, por exemplo
+%dividir o código que falta em vários arquivos
+%e modificar o \texttt{Makefile} em correspondência.
+O resultado deve ser código em Octave que 
+produz as tabelas e gráficos para o problema apresentado.
+Os alunos obrigatoriamente devem fornecer exemplos
+testados. O usuário (neste caso o professor) não deve ter o trabalho
+de digitar nada, além da linha de comando no Octave que executa
+o(s) programa(s) principa(l)(ais).
+
+
+O produto final deve ser um arquivo no formato \texttt{zip}
+com a seguinte sintaxe:
+\texttt{aluno1+aluno2.zip}.
+%Atenção: Nenhum executável ou código objeto pode estar dentro do projeto,
+%pois os serviços de e-mail, como, por exemplo, Hotmail
+%recusam o transporte de tais arquivos por razões de segurança.
+O aluno se responsabiliza pelo envio e recepção correta.
+Em caso de problemas maiores de tráfego de rede (serviços UFES fora do ar),
+o aluno deve mandar novamente o arquivo original (encaminhamento
+da mensagem original) quando o serviço voltar.
+O arquivo \texttt{aluno1+aluno2.zip} deve conter uma {\bf única} pasta
+com o nome \texttt{aluno1+aluno2}. Duas subpastas devem conter
+o código fonte
+%(sem código compilado e executável)
+e a documentação do projeto.
+%O código deve ter um \texttt{Makefile} que me permite a compilação
+%facilitada. Devem-se produzir vários arquivos de teste.
+O arquivo \texttt{aluno1+aluno2.zip} deve ser mandado como
+anexo {\bf exclusivamente} copiando a hiperligação seguinte no browser
+ou cliente de E-mail:\\
+
+\urlemail{thomas.rauber@ufes.br}{Algoritmos Numericos 2016/2: Entrega de trabalho}\\
+
+
+A documentação deve ser em forma de descrição de projeto com os,
+preferencialmente gerado por \LaTeX, contendo os
+seguintes tópicos:
+\begin{itemize}
+\item Capa do Projeto
+	\begin{itemize}
+	\item Título
+	\item Autoria
+	\item Data
+	\item Resumo
+	\end{itemize}
+
+\item Introdução
+\item Objetivos
+\item Metodologia
+\item Resultados e Avaliação
+\item Referências Bibliográficas
+\end{itemize}
+
+
+
+\vspace{.5cm}
+Última atualização: \today, \currenttime
+
+\vspace{.5cm}
+\textit{Bom trabalho!}
+
+\end{document}

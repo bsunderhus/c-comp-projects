@@ -1,0 +1,7 @@
+1;R;Hamburguer;3;x; 
+12;R;Pizza Brotinho;3;x; 
+17;R;Salada pequena;2,5;; 
+21;B;Cola-cola 600ml;3;;600 
+25;B;Suco de laranja;2,5;;500 
+26;S;Salada de fruta;2,9;; 
+29;S;Açaí;5,5;; 

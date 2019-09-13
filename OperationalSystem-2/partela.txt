@@ -1,0 +1,24 @@
+ps -l
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000  2180  2158  0  80   0 -  6925 wait   pts/0    00:00:00 bash
+0 S  1000  2640  2180  0  80   0 -  1041 hrtime pts/0    00:00:00 a.out
+0 R  1000  2641  2180  0  80   0 -  3482 -      pts/0    00:00:00 ps
+
+ps -l
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000  2180  2158  0  80   0 -  6925 wait   pts/0    00:00:00 bash
+1 S  1000  2642     1  0  80   0 -  1041 hrtime pts/0    00:00:00 a.out
+1 S  1000  2643     1  0  80   0 -  1041 hrtime pts/0    00:00:00 a.out
+0 R  1000  2644  2180  0  80   0 -  3482 -      pts/0    00:00:00 ps
+
+ps -l
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000  2180  2158  0  80   0 -  6925 wait   pts/0    00:00:00 bash
+1 S  1000  2645     1  0  80   0 -  1041 hrtime pts/0    00:00:00 a.out
+1 S  1000  2646     1  0  80   0 -  1041 hrtime pts/0    00:00:00 a.out
+0 R  1000  2647  2180  0  80   0 -  3482 -      pts/0    00:00:00 ps
+
+ps -l
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000  2180  2158  0  80   0 -  6925 wait   pts/0    00:00:00 bash
+0 R  1000  2648  2180  0  80   0 -  3482 -      pts/0    00:00:00 ps

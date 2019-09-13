@@ -1,0 +1,1 @@
+dvipdfm -q an16at1

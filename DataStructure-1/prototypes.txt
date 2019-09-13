@@ -1,0 +1,67 @@
+void umadirecao(Arv_Char arv, int* i,FILE* ent,FILE* saida,char* vetTexto,int* pos,int aux){
+	while(!feof(ent)){
+	Arv_Char a = arv.	
+	while(i[aux]< 8)
+{
+	if(i[aux] == 0){
+		 a = a->esq;
+		if(a->esq == NULL && a->dir == NULL)
+		{
+		 vetTexto[*pos] = a->carac;
+		 printf("Escreve %c\n\n",a->carac);
+		 if((*pos)==1024){
+		 fwrite(vetTexto,1,1024,saida);
+		 (*pos)=-1;
+		 }
+		 (*pos)++;
+		 a = arv; 
+		}
+	}
+	if(i[aux] == 1){
+		a = a->dir
+		if(a->esq == NULL && a->dir == NULL)
+		{
+		 		 vetTexto[*pos] = a->carac;
+		 printf("Escreve %c\n\n",a->carac);
+		 if((*pos)==1024){
+		 fwrite(vetTexto,1,1024,saida);
+		 (*pos)=-1;
+		 }
+		 (*pos)++;
+		 a = arv; 
+		}
+	}
+	aux++;
+    }
+      proxChar(ent,i);
+      aux=0;
+  }
+}
+
+//-------------------------------------------------
+	Arv_Char* a = arv;
+
+	if(arv->esq == NULL && arv->dir == NULL){
+		vetTexto[pos] == arv->carac;
+		return;
+	}
+	if(vet[aux]==0){
+		umadirecao(arv,0);
+		aux++;
+		return;
+	}
+	if(vet[aux]==1){
+		umadirecao(arv,1);
+		aux++;
+		return;
+	
+	}
+
+
+Arv_Char umadirecao(Arv_Char arv, int i){
+	if(i == 0){
+		return arv->esq;
+	}else{
+		return arv->dir;
+	}
+}

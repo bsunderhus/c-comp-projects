@@ -1,0 +1,9 @@
+algoritmo teste_variaveis2;
+
+variaveis
+    bitset : matriz[10] de logicos;
+    quadr : matriz[4][4] de inteiros;
+fim_variaveis
+
+inicio
+fim

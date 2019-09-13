@@ -1,0 +1,151 @@
+./disquerango -e entregadores.csv -c cardapio.csv
+Telefone (0 para sair):
+Cliente não cadastrado. Novo cadastro:
+Nome:
+Endereço:
+Ponto de referência:
+Cliente cadastrado: Vítor
+[C]onfirma ou [R]ecadastra?
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "X-Bacon" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "Pizza Brotinho" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "Coca-cola 2 litros" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código 30 no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+Telefone (0 para sair):
+Cliente não cadastrado. Novo cadastro:
+Nome:
+Endereço:
+Ponto de referência:
+Cliente cadastrado: 555-2167
+[C]onfirma ou [R]ecadastra?
+Informação não reconhecida.
+Cliente cadastrado: 555-2167
+[C]onfirma ou [R]ecadastra?
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "Macarronada" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "Salada grande" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "Cachorro Quente" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "Suco de laranja" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+Total: 18. Confirma?
+Telefone (0 para sair):
+Cliente não cadastrado. Novo cadastro:
+Nome:
+Endereço:
+Ponto de referência:
+Cliente cadastrado: Giancarlo
+[C]onfirma ou [R]ecadastra?
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "Pizza Família" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "Guaraná 2 litros" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+Total: 24. Confirma?
+Telefone (0 para sair):
+Cliente não cadastrado. Novo cadastro:
+Nome:
+Endereço:
+Ponto de referência:
+Cliente cadastrado: Renata
+[C]onfirma ou [R]ecadastra?
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "Americano" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "Guaraná lata" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "Mouse de maracujá" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+Total: 8. Confirma?
+Telefone (0 para sair):
+Cliente não cadastrado. Novo cadastro:
+Nome:
+Endereço:
+Ponto de referência:
+Cliente cadastrado: Monalessa
+[C]onfirma ou [R]ecadastra?
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "Lasanha" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "Salada pequena" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "Cola-cola 600ml" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "Guaraná 600ml" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "Açaí" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+Total: 18. Confirma?
+Telefone (0 para sair):
+Cliente não cadastrado. Novo cadastro:
+Nome:
+Endereço:
+Ponto de referência:
+Cliente cadastrado: João Paulo
+[C]onfirma ou [R]ecadastra?
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "X-Frango" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "X-Bacon" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "X-Burguer" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "Coca-cola 2 litros" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Adicionando "Mousse de chocolate" ao pedido. Quantidade:
+Adicionar item número (? para cardápio, 0 para finalizar):
+	Não há item com código  no cardápio.
+Adicionar item número (? para cardápio, 0 para finalizar):
+Total: 22. Confirma?
+Telefone (0 para sair):
+Relatório de pedidos do dia:
+João Paulo;555-2132;;;22Monalessa;555-2140;;;18Renata;555-2196;;;8Giancarlo;555-2189;;;24555-2167;S;;;18Relatório de entregadores: 
+Relatório de itens vendidos: 

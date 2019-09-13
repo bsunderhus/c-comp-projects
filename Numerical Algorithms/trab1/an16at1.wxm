@@ -1,0 +1,23 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+func(x,y) := (2*x^2+6*y)/(1+y)$
+func(x,y) := (3*y+x)/(x-1)$
+func(x,y) := (2*x+y)/(x+1)$
+func(x,y) := (x+y)/(x+1)$
+func(x,y) := 2*x+3$
+
+
+
+x0:1$
+y0:2$
+
+print("PVI: y'=",func(x,y),", y(",x0,")=",y0)$
+
+disp("Solução analítica de PVI:")$
+y(x):=''(rhs(''(ic1(ode2('diff(y,x)=func(x,y),y,x),x=x0,y=y0))));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

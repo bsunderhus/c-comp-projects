@@ -1,0 +1,11 @@
+algoritmo atribuicao_de_matrizes;
+
+variaveis
+    m1 : matriz[2] de inteiros;
+    m2 : matriz[2] de inteiros;
+fim_variaveis
+
+inicio
+    m1 := m2; //erro
+    imprima(m1); //erro
+fim

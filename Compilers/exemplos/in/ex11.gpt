@@ -1,0 +1,26 @@
+algoritmo teste_vars;
+
+variaveis
+    i : inteiro;
+    r : real;
+fim_variaveis
+
+inicio
+    i := 42;
+    i := -42;
+    i := -00001;
+    i := +0001;
+    i := 0xFF;
+    i := 0XFF;
+    i := 0xEfaB;
+    i := 0c037;
+    i := 0C037;
+    i := 0c038; // Erro: fora da faixa de octal.
+    i := 0b1001;
+    i := 0B110;
+    i := -0b11; // Erro: somente decimais podem ter sinal.
+    r := 1.234;
+    r := -0.132;
+    r := +0.2354;
+    r := 1.1.1; // Erro!
+fim

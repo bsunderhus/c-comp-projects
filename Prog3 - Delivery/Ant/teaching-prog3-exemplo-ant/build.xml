@@ -1,0 +1,53 @@
+<project name="TrabalhoProg3_2013_1" default="run" basedir=".">
+	<description>Arquivo de build de exemplo para o trabalho de Prog3, 2013-1.</description>
+
+	<!-- Propriedades do build. -->
+	<property name="src" location="src"/>
+	<property name="bin" location="bin"/>
+
+	<!-- Inicialização. -->
+	<target name="init" description="Inicializa as estruturas necessárias.">
+		<tstamp/>
+		<mkdir dir="${bin}"/>
+	</target>
+
+	<!-- Compilação. -->
+	<target name="compile" depends="init" description="Compila o código-fonte.">
+		<javac srcdir="${src}" destdir="${bin}"/>
+	</target>
+	
+	<!-- Execução normal. -->
+	<target name="run" depends="compile" description="Executa o programa principal.">
+		<java classname="br.ufes.inf.prog3.trab20131.aplicacao.AplInscricoes">
+			<classpath>
+				<pathelement path="${bin}"/>
+			</classpath>
+		</java>
+	</target>
+
+	<!-- Execução read only. -->
+	<target name="run-read-only" depends="compile" description="Executa o programa principal.">
+		<java classname="br.ufes.inf.prog3.trab20131.aplicacao.AplInscricoes">
+			<arg value="--read-only"/>
+			<classpath>
+				<pathelement path="${bin}"/>
+			</classpath>
+		</java>
+	</target>
+
+	<!-- Execução write only. -->
+	<target name="run-write-only" depends="compile" description="Executa o programa principal.">
+		<java classname="br.ufes.inf.prog3.trab20131.aplicacao.AplInscricoes">
+			<arg value="--write-only"/>
+			<classpath>
+				<pathelement path="${bin}"/>
+			</classpath>
+		</java>
+	</target>
+
+	<!-- Limpeza. -->
+	<target name="clean" description="Limpa o projeto, deixando apenas o código-fonte." >
+		<delete dir="${bin}"/>
+		<delete><fileset dir="." includes="*.csv"/></delete>
+	</target>
+</project>

@@ -1,0 +1,8 @@
+//codigo invalido: faltando fim-se
+algoritmo se_invalido;
+
+inicio
+    se x = 2 entao
+        imprima("ok");
+    imprima("estou dentro ou fora do bloco \"se\"?");
+fim

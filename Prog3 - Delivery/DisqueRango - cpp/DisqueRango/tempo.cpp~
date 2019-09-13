@@ -1,0 +1,58 @@
+#include <ctime>
+#include <string>
+
+#include "tempo.h"
+
+using namespace std;
+
+//tempo::temp = time(0);
+//tempo::datas = localtime(&temp);
+
+void tempo::data(char* ss){
+  strftime(ss,50,"%d/%m/%Y;%R",datas);
+}
+
+void tempo::adicionaDezMin(){
+  if((datas->tm_min + 10) >= 60){
+    datas->tm_min = 9;
+    if((datas->tm_hour + 1) >= 24){
+     datas->tm_hour = 0;
+     if((datas->tm_mday) + 1 >= 32){
+      datas->tm_mday = 1;
+      if((datas->tm_mon) + 1 >= 12){
+       datas->tm_mon = 0;
+       datas->tm_year += 1;
+      }else{
+	datas->tm_mon += 1;
+      }
+     }else{
+       datas->tm_mday += 1;
+    }
+    }else{
+      datas->tm_hour += 1;
+    }
+   }else{
+     datas->tm_min += 10;
+  }
+}
+
+tempo::tempo(){
+}
+
+tempo::tempo(int i){
+   temp = time(0);
+  datas = localtime(&temp);
+}
+
+tempo::tempo(char* teste){
+  temp = time(0);
+  datas = localtime(&temp);
+  datas->tm_year = 113;
+  datas->tm_mon = 11;
+  datas->tm_mday = 20;
+  datas->tm_hour = 23;
+  datas->tm_min = 59;
+  datas->tm_sec = 59;
+}
+
+tempo::~tempo(){}

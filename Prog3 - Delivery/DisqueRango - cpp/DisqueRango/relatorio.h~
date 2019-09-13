@@ -1,0 +1,21 @@
+#include <vector>
+#include <string>
+
+using namespace std;
+
+#include "cardapio.h"
+#include "entregador.h"
+#include "pedidos.h"
+
+#ifndef RELATORIO_H_
+#define RELATORIO_H_
+
+class relatorio{
+public:
+  relatorio(vector<entregador> e,vector<cardapio> c,vector<pedidos> pedDia , tempo& t);
+  void pedidosDoDia(vector<pedidos>pedDia);
+  void entregadores(vector<entregador>e);
+  void itensVendidos(vector<entregador>e,vector<cardapio>c);
+};
+
+#endif //RELATORIO_H_

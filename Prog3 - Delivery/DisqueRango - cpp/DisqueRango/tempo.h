@@ -1,0 +1,18 @@
+#include <ctime>
+#include <string>
+
+#ifndef TEMPO_H_
+#define TEMPO_H_
+
+class tempo{
+public:
+	time_t temp;
+	struct tm* datas;
+	tempo();
+	tempo(int i);
+	tempo(char* teste);
+	void data(char* ss);
+	void adicionaDezMin();
+	 ~tempo();
+};
+#endif //TEMPO_H_

@@ -1,0 +1,52 @@
+<project name="TrabalhoProg3_2013_2" default="run" basedir=".">
+	<description>Arquivo de build de exemplo para o trabalho de Prog3, 2013-1.</description>
+
+	<!-- Propriedades do build. -->
+	<property name="src" location="src"/>
+	<property name="bin" location="bin"/>
+
+	<!-- Inicialização. -->
+	<target name="init" description="Inicializa as estruturas necessárias.">
+		<tstamp/>
+		<mkdir dir="${bin}"/>
+	</target>
+
+	<!-- Compilação. -->
+	<target name="compile" depends="init" description="Compila o código-fonte.">
+		<javac srcdir="${src}" destdir="${bin}"/>
+	</target>
+
+	<!-- Execução normal. -->
+	<target name="run" depends="compile" description="Executa o programa principal.">
+		<java classname="DisqueRango.DisqueRango">
+			<arg value="-teste"/>
+			<arg value="-e"/>
+			<arg value="entregadores.csv"/>
+			<arg value="-c"/>
+			<arg value="cardapio.csv"/>
+			<classpath>
+				<pathelement path="${bin}"/>
+			</classpath>
+		</java>
+	</target>
+
+	<!-- Execução write only. -->
+	<target name="continue" depends="compile" description="Executa o programa principal.">
+		<java classname="DisqueRango.DisqueRango">
+			<arg value="-teste"/>
+			<arg value="-p"/>
+			<arg value="disquerango.dat"/>
+			<classpath>
+				<pathelement path="${bin}"/>
+			</classpath>
+		</java>
+	</target>
+
+	<!-- Limpeza. -->
+	<target name="clean" description="Limpa o projeto, deixando apenas o código-fonte." >
+		<delete dir="${bin}"/>
+		<delete><fileset dir="." includes="*.csv"/></delete>
+		<delete><fileset dir="." includes="*.txt"/></delete>
+		<delete><fileset dir="." includes="*.dat"/></delete>
+	</target>
+</project>

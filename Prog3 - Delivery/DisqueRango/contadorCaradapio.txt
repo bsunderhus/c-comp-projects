@@ -1,0 +1,16 @@
+public int Counter(){
+	try{
+		FileReader file2 = new FileReader(ARGUMENTO 2);
+		BufferedReader cardap = new BufferedReader(file2);
+		while((data = cardap.readLine()) != null){
+		cardapCount++;		
+		}
+		cardap.close();
+		return cardapCounter;
+	}catch(IOExpection e){
+		System.err.printf("Erro na abertura do arquivo: %s.\n", e.getMessage());
+		}
+		return cardapCount;
+
+	}
+}

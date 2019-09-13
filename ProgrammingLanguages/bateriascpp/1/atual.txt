@@ -1,0 +1,167 @@
+i
+apto
+44955
+Thais Nobre De Morais
+1
+2
+5
+224.4
+3149
+N
+17
+
+i
+casa
+48268
+Barbara Miranda Vallandro
+8
+6
+4
+986.7
+688
+911.6
+4494
+
+i
+trapez
+41500
+Gabriella Siqueira Miranda
+R
+3548
+20.3
+693.1
+517.8
+
+i
+triang
+48658
+Amanda Loyola Goulart
+A
+202
+14.1
+740.5
+
+i
+trapez
+64532
+Pedro Salim Carone
+A
+8725
+373.6
+3.7
+268.3
+
+i
+trapez
+49055
+Marina De Lorenzo Azevedo
+A
+4987
+229.6
+821.7
+819.9
+
+i
+triang
+48245
+Bruna Afonso Venturini
+R
+6861
+784.3
+436.2
+
+i
+trapez
+42476
+Henrique Nespoli Castro
+R
+8964
+221.4
+765.8
+542.4
+
+i
+triang
+48248
+Cristal Ramalho Antunes
+A
+4242
+336.7
+278.7
+
+i
+trapez
+92080
+Rodrigo Ferreira Berriel
+R
+7873
+45.4
+895.9
+522.7
+
+a
+casa
+40897
+Gabriella Xavier Lindenberg Von Schilgen
+9
+5
+10
+64.5
+3764
+590.3
+3612
+
+a
+triang
+59254
+Luisa Scaramussa Antunes
+A
+654
+59.1
+404.2
+
+a
+trapez
+78256
+Marcos Vinicius Messner Delfino
+R
+3328
+713.1
+803.4
+606.2
+
+a
+casa
+42407
+Laurana De Polli Cellin
+4
+4
+2
+113.4
+3082
+364.2
+2556
+
+a
+retang
+48424
+Arthur Souza Louro
+R
+7215
+38.0
+257.7
+
+e
+48239
+
+e
+44471
+
+e
+72649
+
+e
+56903
+
+e
+56729

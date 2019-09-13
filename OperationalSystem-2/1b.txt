@@ -1,0 +1,12 @@
+Se matar processo A no começo do programa, o programa então é finalizado sem a criação de nenhuma processo filho. 
+Pela implementação abordada o processo A é finalizado assim que B e C são criados.
+Nesse caso tanto B quanto C são adotados pelo processo de PID 1.
+
+Se matar o processo B antes da criação de B.1 e B.2, o programa não cria nenhum dos dois e continua. 
+Assim que B.1 e B.2 são criados o processo B é finalizado, assim, nesse caso, tanto B.1 quanto B.2 são adotados
+pelo processo de PID 1.
+
+Se matar o processo C em qualquer caso nada acontece. O programa continua sem interferência.
+
+Quando matar um processo pai o processo filho é adotado pelo processo de PID 1 e continua executando normalmente.
+Caso tente matar um processo filho, o mesmo para e o programa continua.

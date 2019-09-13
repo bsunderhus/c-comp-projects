@@ -1,0 +1,9 @@
+/* Primeiro algoritmo
+ * em G-Portugol.
+ */
+
+algoritmo ola_mundo;
+
+inicio
+  imprima("Olá mundo!");
+fim

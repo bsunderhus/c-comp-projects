@@ -1,0 +1,188 @@
+apto
+93391
+Mayara Cavatte
+4
+3
+2
+853.0
+4737
+N
+3
+
+retang
+45305
+Rodrigo Braga Ferreira
+R
+8931
+388.2
+165.7
+
+casa
+54784
+Henrique Romano Carneiro
+8
+0
+0
+831.9
+5303
+843.3
+6248
+
+retang
+49117
+Leon Cleres Penido Pinheiro
+G
+1793
+98.3
+874.8
+
+casa
+48355
+Davi Lozzer Barcelos
+1
+1
+0
+840.4
+5195
+639.0
+1732
+
+apto
+87174
+Victor Hemerly Moreira Vieira Torres
+3
+9
+7
+227.1
+7683
+S
+10
+
+retang
+48502
+Debora Bosi Ribeiro
+G
+6669
+893.1
+507.6
+
+casa
+72656
+Lucas Martinelli Da Silva
+4
+8
+10
+146.1
+5244
+518.9
+2616
+
+retang
+54829
+Jose Roberto Sabino Junior
+R
+9410
+314.3
+224.7
+
+casa
+48487
+Carolina Cortez Pinheiro
+4
+0
+10
+284.0
+9851
+702.7
+1317
+
+triang
+49029
+Livia Leite Santiago Lima
+G
+7721
+810.7
+29.3
+
+apto
+42286
+Giselle Ronacher Passos Silva
+1
+1
+4
+979.7
+7266
+S
+6
+
+retang
+54874
+Erlen Santos Paigel
+A
+8818
+576.6
+727.0
+
+trapez
+56853
+Raquel Colombo Pereira
+G
+6740
+655.4
+284.0
+74.3
+
+apto
+59254
+Luisa Scaramussa Antunes
+8
+1
+3
+706.7
+8538
+S
+9
+
+retang
+44704
+Miguel Rios Escossia De Oliveira
+R
+6978
+243.8
+751.9
+
+casa
+44471
+Ramon De Oliveira Rossi
+7
+10
+6
+561.7
+1513
+892.2
+2523
+
+retang
+45298
+Yago De Morais Almeida
+G
+5050
+749.7
+106.6
+
+retang
+56916
+Nathalia Moraes Figueiredo
+G
+3836
+868.1
+552.9
+
+trapez
+56827
+Thais Bacelar Reblin
+G
+3331
+222.5
+804.2
+130.3

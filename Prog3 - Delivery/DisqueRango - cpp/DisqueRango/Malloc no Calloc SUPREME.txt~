@@ -1,0 +1,66 @@
+	/*
+	 * Inicialização da struct tm a ser usada.
+	 * Lembra de dar o #include <ctime>
+	 */
+	struct tm* data;	// É a variável que será constantemente
+				// usada.
+
+	time_t tempo;
+	time(&tempo);
+	data = localtime(&tempo);
+
+	/*
+	 * Em caso de arquivo de teste usado, inicia a data
+	 * para a designada na especificação.
+	 */
+	if(loader.issoEUmTeste()) {
+		(*data).tm_year = 113;
+		(*data).tm_mon = 11;
+		(*data).tm_mday = 20;
+		(*data).tm_hour = 23;
+		(*data).tm_min = 59;
+		(*data).tm_sec = 59;
+	}
+
+	// Caso queira fazer um teste do tempo que está, segue o cout.
+	// Aliás, favor notar que tudo no data foi modificado, exceto
+	// pelo dia da semana que, bem... Não importa no trabalho.
+
+	cout << "\n\tTEMPO: " << asctime(data) << endl;
+
+	/*
+	 * Em caso de /teste para execução do programa, o código abaixo será
+	 * rodado para controlar o horário dos pedidos.
+	 */
+
+	// Código pra ver ser é só pra adicionar 10 minutos sem maiores
+	// problemas.
+
+	if(loader.issoEUmTeste() == true) {
+		if(((*data).tm_min + 10) >= 60) {
+			(*data).tm_min = 9;
+			if(((*data).tm_hour + 1) >= 24) {
+				(*data).tm_hour = 0;
+				if(((*data).tm_mday) + 1 >= 32) {
+					(*data).tm_mday = 1;
+					if(((*data).tm_mon) + 1 >= 12) {
+						(*data).tm_mon = 0;
+						(*data).tm_year += 1;
+					} else {(*data).tm_mon += 1;}
+				} else {(*data).tm_mday += 1;}
+			} else {(*data).tm_hour += 1;}
+		} else {(*data).tm_min += 1;}
+	}
+
+// @@@@@@@@@@ FUNÇÃO PARA TROCAR VÍRGULA POR PONTO @@@@@@@@@@
+
+	// Note que, nessa função especificamente, só troca o preço,
+	// mas você poderia generalizar ela passando a string a ser
+	// analisada como um parâmetro. It's your call.
+
+	string cardapio::returnPrecoReplacedComma() {
+		string st = this->getPreco();
+
+		st.replace(this->preco.find(","), 1, ".");
+		return st;
+	}

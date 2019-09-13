@@ -1,0 +1,943 @@
+apto
+42286
+Giselle Ronacher Passos Silva
+8
+7
+4
+630.4
+5413
+N
+7
+
+triang
+48575
+Bianca Altoe Borel
+A
+3212
+294.9
+693.5
+
+casa
+44471
+Ramon De Oliveira Rossi
+7
+1
+5
+507.0
+8847
+658.9
+8071
+
+triang
+56916
+Nathalia Moraes Figueiredo
+G
+2945
+749.3
+950.4
+
+casa
+49110
+Leticia Nascimento Alvarenga Pinheiro
+1
+2
+0
+127.3
+317
+563.7
+3512
+
+trapez
+72656
+Lucas Martinelli Da Silva
+G
+5776
+904.9
+576.5
+864.2
+
+casa
+54733
+Hayla Lorenzoni Guedes Garcia
+2
+6
+9
+31.1
+6169
+271.7
+8134
+
+trapez
+72661
+Luisa Moitinho Santanna
+A
+3440
+28.2
+799.4
+795.4
+
+trapez
+70738
+Mayara Silva Medeiros
+A
+7991
+899.4
+567.5
+575.6
+
+retang
+44767
+Vinicius Araujo Soares
+R
+590
+322.9
+361.4
+
+trapez
+48617
+Clara Pacheco Santos
+A
+6543
+403.6
+423.5
+152.9
+
+retang
+59255
+Lucas Fraga Lopes
+A
+171
+293.1
+48.9
+
+casa
+48537
+Augusto Soares De Carvalho
+2
+4
+4
+175.4
+9672
+863.5
+2772
+
+apto
+45298
+Yago De Morais Almeida
+8
+0
+8
+845.1
+7124
+N
+19
+
+trapez
+70723
+Pedro Victor Campos Doelinger
+A
+1922
+742.8
+356.1
+514.7
+
+retang
+59273
+Lucas Miranda Barbosa
+A
+9896
+502.4
+520.4
+
+apto
+48604
+Breno Dias Breda
+10
+9
+14
+857.2
+8671
+N
+16
+
+apto
+77160
+Wagner Klippel Dominicini
+2
+9
+1
+545.5
+4448
+N
+18
+
+casa
+56890
+Victor Lira De Queiroz Vieira
+3
+3
+4
+317.2
+811
+164.4
+2116
+
+trapez
+55047
+Fabiana Rocio De Vargas
+R
+1526
+834.9
+493.8
+475.8
+
+triang
+44723
+Silas Rubens Hermisdorf
+R
+6652
+55.0
+221.2
+
+triang
+48335
+Adna Pereira Borges Luxinger
+A
+1818
+979.2
+916.6
+
+trapez
+41406
+Erick Ramos Dos Santos
+G
+2782
+225.1
+789.4
+594.3
+
+apto
+41022
+Joao Vitor Santos Fernando
+0
+1
+6
+905.9
+6759
+S
+10
+
+casa
+41485
+Igor Lubiana Chiste
+8
+9
+1
+959.5
+8429
+903.0
+5340
+
+triang
+48658
+Amanda Loyola Goulart
+R
+9460
+75.5
+637.5
+
+triang
+44830
+Rafael Schneider Cogo
+G
+299
+929.0
+14.3
+
+apto
+42339
+Jordana Sartori Tartaglia
+1
+2
+1
+407.8
+7441
+S
+7
+
+triang
+44626
+Natasha Lares Kludasch
+G
+8532
+284.2
+148.0
+
+trapez
+58964
+Brunella Maitam Paris
+R
+8922
+175.1
+576.9
+161.2
+
+trapez
+41013
+Larissa Macedo Rosa Silva
+A
+6282
+32.1
+531.0
+33.0
+
+retang
+44850
+Rodrigo Pompermayer Soares
+R
+1932
+616.4
+267.6
+
+apto
+40954
+Gustavo Silva Alves
+6
+7
+2
+949.2
+1933
+S
+2
+
+apto
+40918
+Kliffton Viana Da Silva
+7
+1
+1
+81.2
+9838
+N
+4
+
+trapez
+44734
+Thiago Sales De Oliveira
+R
+3885
+121.5
+805.4
+959.9
+
+casa
+40888
+Kim Vieira Goncalves
+2
+7
+8
+887.0
+2928
+854.8
+9884
+
+trapez
+45161
+Thiago Norbim Kley
+R
+1775
+872.4
+956.9
+250.5
+
+apto
+42018
+Fernando Martins Maioli
+3
+10
+13
+918.9
+3239
+S
+17
+
+trapez
+48378
+Ayn Lauren Schoenster
+G
+8264
+614.4
+57.3
+648.3
+
+apto
+44763
+Pamela Kerschr Pedrosa Da Silva
+9
+3
+9
+162.4
+7100
+N
+14
+
+trapez
+44499
+Paulo Vitor Vieria Oliveira
+A
+1325
+168.3
+640.7
+515.7
+
+casa
+56729
+Rafael De Amorim Salgado
+1
+3
+4
+330.7
+9874
+905.6
+3166
+
+trapez
+41587
+Gabriela Pessoa E Pires
+G
+6122
+79.8
+972.2
+290.6
+
+apto
+49117
+Leon Cleres Penido Pinheiro
+10
+3
+16
+288.0
+1381
+N
+20
+
+trapez
+48234
+Barbara Pereira Silvestre
+G
+2857
+827.9
+361.7
+858.1
+
+trapez
+45087
+Samantha Negris De Souza
+G
+2086
+838.9
+120.1
+795.7
+
+apto
+56673
+Sergio Augusto Furtado De Mello
+6
+10
+4
+233.7
+2291
+S
+13
+
+triang
+49124
+Livia Da Silva Conci
+A
+6090
+852.1
+613.3
+
+retang
+40949
+Gillan Lopes Muniz Schirmer
+G
+7482
+573.3
+627.7
+
+apto
+58969
+Aston Marques Midon
+9
+9
+1
+765.3
+234
+N
+19
+
+apto
+93391
+Mayara Cavatte
+7
+1
+4
+76.7
+5455
+S
+10
+
+trapez
+48488
+Camila Secco Libardi
+R
+9992
+296.8
+634.7
+822.7
+
+trapez
+49111
+Mariana Crivilin Gaudio
+R
+7267
+163.9
+966.8
+59.5
+
+retang
+59254
+Luisa Scaramussa Antunes
+A
+1029
+297.9
+45.3
+
+triang
+48248
+Cristal Ramalho Antunes
+G
+4890
+91.4
+997.8
+
+apto
+58989
+Dyeison Wendley De Souza Ferreira Gomes
+9
+9
+1
+926.7
+1035
+S
+12
+
+trapez
+48408
+Cassio Pretti
+A
+3992
+117.0
+648.1
+253.2
+
+trapez
+49032
+Matheus Sobreira Binoti
+G
+2922
+387.2
+675.6
+332.9
+
+triang
+88099
+Aline Gasparini Sampaio
+A
+5585
+442.9
+392.6
+
+apto
+59267
+Luiz Fernando Silva De Oliveira
+7
+0
+6
+961.7
+8563
+S
+14
+
+trapez
+54874
+Erlen Santos Paigel
+A
+3116
+226.0
+879.0
+408.5
+
+triang
+83142
+Andre Salotto Rocha
+R
+5625
+963.8
+583.9
+
+retang
+44705
+Nicolle Louzada Capucho
+A
+6018
+47.0
+1.9
+
+triang
+78256
+Marcos Vinicius Messner Delfino
+A
+9005
+322.4
+11.4
+
+triang
+64542
+Rafael Eiji Nakamura
+R
+6806
+107.4
+301.5
+
+trapez
+56876
+Vinicius Genelhu Abreu De Souza Cobe
+G
+24
+5.1
+376.5
+972.1
+
+trapez
+44747
+Nilo Caiado Fraga Neto
+G
+4575
+625.8
+482.3
+345.9
+
+retang
+55088
+Jefferson Souza Claudino
+A
+7616
+196.8
+592.2
+
+apto
+55205
+Larissa Guerra Dornelas
+0
+1
+13
+435.2
+590
+S
+14
+
+triang
+42308
+Gabriel Henrique Comerio
+G
+1019
+332.7
+754.6
+
+apto
+48509
+Damaris Alves Barbosa Da Silva
+2
+5
+3
+573.6
+8325
+N
+6
+
+apto
+58979
+Artur Dalla Cypreste
+8
+10
+1
+647.1
+4924
+N
+12
+
+casa
+45293
+Mindszenty Junior Pedroza Garozi
+8
+8
+7
+622.0
+8079
+539.2
+9372
+
+triang
+49055
+Marina De Lorenzo Azevedo
+R
+8923
+255.0
+448.2
+
+apto
+56826
+Priscilla Correa Goncalves De Rezende
+5
+3
+2
+956.4
+3020
+S
+6
+
+retang
+45097
+Rodrigo Antonio Toffoli
+R
+3485
+34.2
+268.6
+
+retang
+45299
+Rodrigo Duarte Coelho
+G
+5972
+723.0
+74.1
+
+triang
+54741
+Hugo Egashira Cavalcante Pinto
+R
+390
+673.8
+217.3
+
+apto
+48447
+Ciro Loyola Tessari
+9
+6
+3
+9.8
+6722
+S
+7
+
+retang
+40938
+Ernani Brandao Nascimento
+R
+1744
+527.3
+255.4
+
+retang
+48493
+Cassio Louzada Borghi
+A
+671
+20.5
+111.0
+
+trapez
+41500
+Gabriella Siqueira Miranda
+R
+836
+53.0
+204.5
+981.4
+
+casa
+42396
+Felipe Peres De Oliveira Ferreira
+0
+10
+3
+183.0
+1466
+308.5
+2394
+
+casa
+42407
+Laurana De Polli Cellin
+10
+6
+8
+514.8
+1473
+338.5
+6445
+
+casa
+49121
+Mariana Dardengo Borges
+6
+6
+6
+644.5
+102
+410.6
+129
+
+retang
+72454
+Ana Carolina Braganca Ribeiro
+A
+5948
+10.1
+118.3
+
+retang
+48239
+Daniel Bortolin Muller
+G
+4051
+344.3
+558.9
+
+trapez
+54888
+Iago Abdalla Fantin
+A
+9250
+205.1
+968.0
+566.1
+
+casa
+49069
+Mateus Starling Rezende
+4
+3
+9
+675.2
+7591
+157.7
+6481
+
+trapez
+44493
+Sabrina Queiroz Silveira
+A
+6449
+71.9
+817.2
+306.5
+
+apto
+49091
+Mariana De Araujo Bazelatto
+9
+3
+13
+738.5
+7216
+N
+17
+
+casa
+93239
+Enzo Salviato Mameri
+10
+6
+7
+401.8
+8621
+580.1
+5134
+
+apto
+82273
+Vander Santos Giuberti
+7
+0
+15
+525.7
+3563
+N
+18
+
+trapez
+45218
+Paula Soares Campeao
+A
+4105
+667.1
+975.7
+61.4
+
+retang
+48251
+Eduardo Pelegrineti Targueta
+G
+5784
+418.8
+254.1
+
+apto
+55120
+Gustavo Soares Martins
+6
+9
+5
+920.6
+7290
+N
+17
+
+triang
+55175
+Larissa Carvalho Fraga
+A
+19
+843.8
+330.3
+
+triang
+49029
+Livia Leite Santiago Lima
+R
+2042
+587.5
+360.5
+
+apto
+48570
+Edson Garcia Fontes
+8
+8
+15
+342.4
+140
+S
+20
+
+retang
+45057
+Thaina Pacheco Moreira Barbosa
+R
+2928
+327.7
+75.0

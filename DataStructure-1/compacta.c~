@@ -1,0 +1,136 @@
+/*
+ *  Trabalho 2 Estrutura de Dados
+ *  Arquivo Compacta.c
+ *  Alunos: Bernardo Sunderhus & Thiago Borges
+ *  ProfÂª: PatrÃ­cia Dockhorn Costa.
+ *
+ */
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include"TadArvore.h"
+#include"TadLista.h"
+#include"bitmap.h"
+
+
+#define TAM 1024
+
+
+int* contaCaracter(FILE* arq, int* v){
+    int i=0;
+    char word;
+    while(fread(&word,1,1,arq)){
+           //sim o "%c\n" faz caracter por caracter, de mesma linha, ou pulando linha e sem repetir linha, don't panic
+            i = word; //converte a letra pra inteiro
+            if( i < 0)
+	      i = 256 + i;
+            v[i]++;
+        }
+    return v;
+}
+
+char* nomeComp(char* nomeArq,char* saida){
+	char n = nomeArq[0];
+	char* nome = (char*)malloc(30*sizeof(char));
+	int i=0;
+	while(n != '.'){
+		nome[i] = n;
+		n = nomeArq[i+1];
+		i++;
+	}
+	saida = (char*)malloc((strlen(nome)+1)*sizeof(char));
+	strcpy(saida,nome);
+	strcat(saida,".comp");
+	return saida;
+}
+
+void extensao(char* nomeArq,FILE* out,FILE* out2){
+	char ext = nomeArq[0];
+	int j,i = 1;
+		while(ext !='.'){
+			ext = nomeArq[i];
+			i++;
+		}
+		fwrite(&ext,1,1,out);
+		fprintf(out2,"%c",ext);
+		for(j=1;j<=3;j++){
+		fwrite(&nomeArq[i],1,1,out);
+		fprintf(out2,"%c",nomeArq[i]);
+		i++;
+		}
+}
+
+int main(int argc, char** argv){
+	
+	FILE* arq;
+	FILE* saida;
+	FILE* saida2;
+	char l;
+	char* outName;
+	int folhas,i,j,alt;
+	
+	Lista_Arv* lista = inicializaLista(); //inicialização da lista de arvores
+	bitmap bmp = bitmapInit(TAM); //inicialização do tipo bitmap
+	int caracteres[256] = {0}; //vetor de caracteres
+	//abertura dos arquivos de saida e leitura do de entrada
+	outName = nomeComp(argv[1],outName);
+	saida = fopen("saida.comp","w"); //saida principal do programa
+	saida2 = fopen("binario.txt","w"); //REMOVER ISSO NA VERSÃO FINAL
+	if(!(arq = fopen(argv[1],"rb"))){
+		printf("Arquivo não encontrado\n");
+		exit(1);
+	}
+	
+	extensao(argv[1],saida,saida2); //Função que pega a extenção do arvquivo de entrada
+	//contagem de caracteres e criação da arvore de Huffman 
+	caracteres[0] = *contaCaracter(arq,caracteres); //Contamos todos os caracteres pertencentes ao arquivo
+	lista = criaLista(caracteres,lista); //E criamos uma lista de arvores com cada elemento do vetor e sua quantidade
+	lista = Huffman(lista); //Função que cria a arvore de Huffman
+	//Impressão dos dados no arquivo de saída
+	folhas = contaLista(lista); //contagem das folhas da árvore
+	fwrite(&folhas,1,1,saida); //impressão da quantidade de folhas
+	fprintf(saida2,"%d",folhas); //REMOVER DA VERSÃO FINAL
+	listaToHuff(&bmp,lista,saida,saida2); //criação da árvore em binário para o arquivo de saida
+	convCharlista(lista,&bmp,saida,saida2); //Função que converte os caracteres em binário
+	fclose(arq);// fechamos o arquivo
+	arq = fopen(argv[1],"r"); //e reabrimos
+	alt = tamanhoArv(lista); //medimos o tamanho da árvore
+	int caminho[alt+1]; //criamos um vetor para sabermos os caminho a ser feito pela árvore
+	int quant = 0,vezes=0; //a quantidade de casas do vetor que usamos (quant) e a quantidade de vezes que o while será usado
+	int qCaracteres = pegaValor(lista); //quantos caracteres temos ao todo (peso da primeira raiz)
+	//pegamos cada caracter do arquivo e percorremos a árvore procurando o caminho, fazendo com que o vetor preencha as casas com 0 para a esquerda e 1 para a direita
+	
+	while(vezes<qCaracteres){
+		 fread(&l,1,1,arq);
+		caminhoArvChar(lista,caminho, l, alt,&quant);
+		fprintf(saida2,"\n"); //REMOVER ISSO NA VERSÃO FINAL
+		for(i=0;i<quant;i++){
+		fprintf(saida2,"%d",caminho[i]);//REMOVER NA VERSÃO FINAL
+ 	  bitmapAppendLeastSignificantBit(&bmp,caminho[i]);
+ 	  if(bmp.length == bmp.max_size){
+	      fwrite(bmp.contents,sizeof(unsigned char),bmp.length/8,saida);
+	  bmp = bitmapInit(TAM);
+ 		}
+	  }
+	  	quant = 0;
+		vezes++;
+	}
+	fprintf(saida2,"%s\n",bmp.contents);//REMOVER NA VERSÃO FINAL
+ 	if((bmp.length)%8 == 0)
+	  fwrite(bmp.contents,sizeof(unsigned char),bmp.length/8,saida); //preenchemos os ultimos bits que faltam
+ 	else
+	{
+ 	  fwrite(bmp.contents,sizeof(unsigned char),(bmp.length/8)+1,saida);
+	  lixo =8 -((bmp.length)%8);
+	  printf("lixo %d\n\n",lixo);
+	}
+	rewind(saida);
+	fwrite(&lixo,1,1,saida);
+	rewind(saida2);
+	fprintf(saida2,"%d",lixo);
+	fclose(saida); //fechamos a saida
+	fclose(saida2); //REMOVER NA VERSÃO FINAL
+	return 0;
+
+}

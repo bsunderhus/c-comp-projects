@@ -1,0 +1,9 @@
+algoritmo teste_variaveis;
+
+variaveis
+    x    : inteiro;
+    nome : literal;
+fim_variaveis
+
+inicio
+fim

@@ -1,0 +1,20 @@
+#include <string>
+#include "cardapio.h"
+
+#ifndef BEBIDA_H_
+#define BEBIDA_H_
+
+using namespace std;
+
+class bebida : public cardapio{
+	string tipo;
+	bool quente;	
+	int volume;
+public:
+	bebida();
+	bebida(int c,string t, string i,float p, int v);
+  
+  ~bebida();
+};
+
+#endif //BEBIDA_H_

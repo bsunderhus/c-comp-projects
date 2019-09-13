@@ -1,0 +1,25 @@
+algoritmo io;
+
+variaveis
+    c: caractere;
+    i: inteiro;
+    r: real;
+    l: literal;
+    z: logico;
+    mat: matriz[2] de inteiros;
+fim_variaveis
+
+inicio
+    imprima("digite um caractere");
+    c := leia();
+    imprima("Digite um número inteiro");
+    i := leia();
+    imprima("Digite um número real:");
+    r := leia();
+    imprima("Digite um texto:");
+    l := leia();
+    imprima("Digite um valor lógico (\"verdadeiro\" ou \"falso\"), um número ou um texto:");
+    z := leia();
+
+    imprima("caractere: ",c,", inteiro: ",i, ", real: ",r,", texto: ",l, ", lógico: ", z,"\n");
+fim

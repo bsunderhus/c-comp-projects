@@ -1,0 +1,41 @@
+Código; Tipo; Item; Preço (R$); Quente [x]; Volume [B]
+1;R;Casquinha de Siri;5;x;
+2;R;Moqueca Capixaba;10;x;
+3;R;Caranguejo;8;x;
+4;R;Salmão;6;x;
+5;R;Tilápia;4;x;
+6;R;Cação;6;x;
+7;R;Bolinho de bacalhau;9;x;
+8;R;Atum acebolado;6;x;
+9;R;Atum ao alho e óleo;5;x;
+10;R;Lula acebolada;8;x;
+11;R;Lula ao alho e óleo;7;x;
+12;R;Frango à passarinho;10;x;
+13;R;Filé mignon grelhado;10;x;
+14;R;Filé mignon à parmegiana;12;x;
+15;R;Salada mista;6,5;;
+16;R;Salada Cesar;7;;
+17;R;Salada de palmito;5,5;;
+18;R;Salada verde;5;;
+19;R;Sushi simples;6;;
+20;R;Sushi especial;8,5;;
+21;B;Suco de laranja jarra;6;;1500
+22;B;Suco de laranja copo;3,5;;550
+23;B;Sukita lata;3;;300
+24;B;Coca-cola lata;3;;350
+25;B;Cola-cola 2,5 litros;5,5;;2500
+26;S;Petit gateau;5,9;;
+27;S;Brigadeiro de colher;3,5;;
+28;S;Sunday;4,9;;
+29;S;Casquinha;2,5;;
+30;S;Milk shake pequeno;6;;
+31;S;Milk shake grande;7,5;;
+32;B;Guaraná 2,5 litros;5,5;;2500
+33;B;Guaraná lata;3;;350
+34;B;Suco de uva lata;3;;250
+35;S;Mouse de morango;4,5;;
+36;S;Picolé;1,5;;
+37;R;Arroz com fritas;6;x;
+38;R;Porção de fritas;5,5;x;
+39;R;Costela com barbecue;9,5;x;
+40;R;Vinagrete;5,9;;

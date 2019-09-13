@@ -1,0 +1,36 @@
+#include <vector>
+#include <string>
+#include <fstream>
+
+#include "entregador.h"
+#include "cardapio.h"
+#include "cliente.h"
+#include "pedidos.h"
+
+#ifndef ITERADOR_H_
+#define ITERADOR_H_
+
+using namespace std;
+
+class iterador{
+public:
+	iterador();
+	void incrementaEntregador(vector<entregador>& e,string n,string p);
+	void incrementaCardapio(vector<cardapio>& c,int co, string t, string i, float p, string quente, int volume);
+	void incrementaCliente(vector<cliente>& cl,cliente& c);
+	void incrementaPedido(vector<cardapio>& p, cardapio& card);
+	void incrementaPedidosDia(vector<pedidos>& pedDia, pedidos& p);
+	void incrementaQuantidade(vector<cardapio>& c1, vector<cardapio>& c2);
+	void incrementaPedidoEntregador(entregador& e, pedidos& p);
+	void imprimeEntregador(vector<entregador>& e);
+	void imprimeEntregadorRelatorio(vector<entregador>& e, ofstream& saida);
+	void imprimeCardapio(vector<cardapio>& c);
+	void imprimeCardapioRelatorio(vector<cardapio>& c, ofstream& saida);
+	void imprimeCliente(vector<cliente>& cl);
+	void imprimePedidos(pedidos& p);
+	void imprimePedidosRelatorio(vector<pedidos>& p, ofstream& saida);
+	cliente* verificaCliente(vector<cliente>& cl,string t);
+	int entregadorDaVez(vector<entregador>& ent);
+};
+
+#endif //ITERADOR_H_

@@ -1,0 +1,27 @@
+#include <vector>
+
+#include "cardapio.h"
+#include "entregador.h"
+#include "cliente.h"
+#include "pedidos.h"
+#include "tempo.h"
+
+#ifndef INTERFACE_H_
+#define INTERFACE_H_
+
+using namespace std;
+class interface{
+public:
+  interface();
+  interface(vector<cliente>& cl,vector<cardapio>& card,vector<pedidos>& pedDia,vector<entregador>& ent,char* teste, tempo& t);
+void fazerPedidos(vector<cardapio>& card, cliente& c);
+void adicionarPedidos(string codigo, vector<cardapio>& card,pedidos& p);
+void finalizaPedidos(vector<entregador>& ent,vector<cardapio>& card,vector<pedidos>& pedDia,cliente& c,string teste, tempo& t);
+cliente cadastro(string tel);
+cliente recadastro(string tel);
+cliente dadosCadastro(string tel);
+cliente opcaoCadastro(string tel, cliente& c);
+
+};
+
+#endif //INTERFACE_H_

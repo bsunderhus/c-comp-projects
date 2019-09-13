@@ -1,0 +1,21 @@
+#include <string>
+
+#include "cardapio.h"
+
+
+#ifndef REFEICAO_H_
+#define REFEICAO_H_
+
+using namespace std;
+
+class refeicao : public cardapio{
+	string tipo;
+	bool quente;
+public:
+  refeicao();
+  refeicao(int c,string t, string i, float p, string quente);
+  
+  ~refeicao();
+};
+
+#endif //REFEICAO_H_

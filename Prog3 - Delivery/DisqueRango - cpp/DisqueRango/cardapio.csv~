@@ -1,0 +1,30 @@
+Código;Tipo;Item;Preço (R$);Quente [R];Volume [B]
+1;;Hamburguer;3;x;
+2;R;Hamburguer com Ovo;3,5;x;
+3;R;X-Burguer;3,5;x;
+4;R;Americano;4;x;
+5;R;X-Frango;4;x;
+6;R;X-Calabresa;4;x;
+7;R;X-Bacon;4;x;
+8;R;X-Tudo;5;x;
+9;R;Pizza Família;19;x;
+10;R;Pizza Média;17;x;
+11;R;Pizza Pequena;14;x;
+12;R;Pizza Brotinho;3;x;
+13;R;Cachorro Quente;3;x;
+14;R;Misto Quente;2;x;
+15;R;Macarronada;5;x;
+16;R;Lasanha;4;x;
+17;R;Salada pequena;2,5;;
+18;R;Salada grande;4,5;;
+19;B;Coca-cola 2 litros;5,5;;2000
+20;B;Guaraná 2 litros;5;;2000
+21;B;Cola-cola 600ml;3;;600
+22;B;Guaraná 600ml;2,5;;600
+23;B;Coca-cola lata;2;;350
+24;B;Guaraná lata;1,5;;350
+25;B;Suco de laranja;2,5;;500
+26;S;Salada de fruta;2,9;;
+27;S;Mousse de chocolate;3;;
+28;S;Mouse de maracujá;3;;
+29;S;Açaí;5,5;;
